@@ -43,6 +43,13 @@ describe('Snake', function() {
         expect(snake.getHeadPosition()).to.deep.equal(new Position(1,0));
     })
 
+    it('can move in west direction', function() {
+        snake.setDirection('west');
+        snake.update();
+        expect(snake.getHeadPosition()).to.deep.equal(new Position(-1,0));
+    })
+
+
     it('can move twice in the same direction', function() {
         snake.setDirection(directionNorth);
         snake.update();
