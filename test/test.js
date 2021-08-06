@@ -29,4 +29,11 @@ describe('Snake', function() {
         snake.setDirection(direction);
         expect(snake.getDirection()).to.equal(direction);
     })
+
+    it('snake can move in direction', function() {
+        let direction = 'north';
+        snake.setDirection(direction);
+        snake.update();
+        expect(snake.getHeadPosition()).to.deep.equal(new Position(0,1));
+    })
 });
