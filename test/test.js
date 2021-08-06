@@ -1,5 +1,10 @@
 class Snake {
     constructor() {}
+
+    getDirection(){
+        return null
+    }
+
 }
 
 const expect = require('chai').expect;
