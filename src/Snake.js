@@ -26,6 +26,9 @@ class Snake {
         if (this.direction === 'north') {
             this.headPosition.positionY++;
         }
+        if (this.direction === 'east') {
+            this.headPosition.positionX++;
+        }
     }
 }
 
