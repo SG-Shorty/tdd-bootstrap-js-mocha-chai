@@ -1,11 +1,5 @@
-class Snake {
-    constructor() {}
-
-    getDirection(){
-        return null
-    }
-
-}
+Snake = require('../src/Snake.js');
+Position = require('../src/Position.js');
 
 const expect = require('chai').expect;
 
@@ -17,6 +11,6 @@ describe('Snake', function() {
 
     it('should have a position on init', function() {
         let snake = new Snake();
-        expect(snake.getHeadPosition()).to.equal(new Position(0,0));
+        expect(snake.getHeadPosition()).to.deep.equal(new Position(0,0));
     })
 });
