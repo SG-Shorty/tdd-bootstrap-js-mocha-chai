@@ -1,4 +1,5 @@
 const Position = require('../src/Position.js');
+const Direciotn = require('../src/Direction.js');
 
 class Snake {
 
@@ -11,7 +12,16 @@ class Snake {
     }
 
     setDirection(direction) {
-        this.direction = direction;
+        if (direction === 'north')
+        {
+            this.direction = Direciotn.NORTH;
+        }
+        if (direction === 'east') {
+            this.direction = Direciotn.EAST;
+        }
+        if (direction === 'west') {
+            this.direction = Direciotn.WEST;
+        }        
     }
 
     getDirection(){
@@ -23,15 +33,7 @@ class Snake {
     }
 
     update() {
-        if (this.direction === 'north') {
-            this.headPosition.positionY++;
-        }
-        if (this.direction === 'east') {
-            this.headPosition.positionX++;
-        }
-        if (this.direction === 'west') {
-            this.headPosition.positionX--;
-        }
+        this.headPosition = this.headPosition.add(this.direction)
     }
 }
 
