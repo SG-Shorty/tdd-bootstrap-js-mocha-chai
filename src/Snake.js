@@ -1,4 +1,4 @@
-Position = require('../src/Position.js');
+const Position = require('../src/Position.js');
 
 class Snake {
 
@@ -16,11 +16,14 @@ class Snake {
     }
 
     getHeadPosition() {
+        if (this.direction === 'north') {
+            return new Position(0, 1);
+        }
         return new Position(0, 0);
     }
 
     update() {
-        
+
     }
 }
 
