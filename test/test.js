@@ -6,15 +6,17 @@ const expect = require('chai').expect;
 describe('Snake', function() {
 
     let snake;
-    let defaultPosition = new Position(0,0);
+    const defaultPosition = new Position(0,0);
+    const directionNorth = 'north';
+
     before(function() {
         snake = new Snake();
-
     });
 
     it('should have no direction on init', function() {
         expect(snake.getDirection()).to.be.null;
     })
+
     it('should have a position on init', function() {
         expect(snake.getHeadPosition()).to.deep.equal(defaultPosition);
     })
@@ -24,15 +26,13 @@ describe('Snake', function() {
         expect(snake.getHeadPosition()).to.deep.equal(defaultPosition);
     })
 
-    it('can receive a new direction', function() {
-        let direction = 'north';
-        snake.setDirection(direction);
-        expect(snake.getDirection()).to.equal(direction);
+    it('can receive a new direction', function() {        
+        snake.setDirection(directionNorth);
+        expect(snake.getDirection()).to.equal(directionNorth);
     })
 
-    it('snake can move in direction', function() {
-        let direction = 'north';
-        snake.setDirection(direction);
+    it('can move in direction', function() {
+        snake.setDirection(directionNorth);
         snake.update();
         expect(snake.getHeadPosition()).to.deep.equal(new Position(0,1));
     })
