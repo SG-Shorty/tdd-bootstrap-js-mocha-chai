@@ -2,10 +2,17 @@ Position = require('../src/Position.js');
 
 class Snake {
 
-    constructor() {}
+    direction;
+    constructor() {
+        this.direction = null;
+    }
+
+    setDirection(direction) {
+        this.direction = direction
+    }
 
     getDirection(){
-        return null
+        return this.direction
     }
 
     getHeadPosition() {
