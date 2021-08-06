@@ -12,6 +12,9 @@ class Snake {
         return new Position(0, 0);
     }
 
+    update() {
+        
+    }
 }
 
 module.exports = Snake;

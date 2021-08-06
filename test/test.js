@@ -16,7 +16,7 @@ describe('Snake', function() {
 
     it('should not move without direction', function() {
         const snake = new Snake();
-        snake.update()
-        expect(snake.getHeadPosition().to.deep.equal(new Position(0,0)))
+        snake.update();
+        expect(snake.getHeadPosition()).to.deep.equal(new Position(0,0));
     })
 });
