@@ -4,26 +4,27 @@ class Snake {
 
     headPosition;
     direction;
+
     constructor() {
         this.direction = null;
         this.headPosition = new Position(0,0);
     }
 
     setDirection(direction) {
-        this.direction = direction
+        this.direction = direction;
     }
 
     getDirection(){
-        return this.direction
+        return this.direction;
     }
 
     getHeadPosition() {
-        return this.headPosition
+        return this.headPosition;
     }
 
     update() {
         if (this.direction === 'north') {
-            this.headPosition = new Position(this.headPosition.positionX, this.headPosition.positionY + 1);
+            this.headPosition.positionY++;
         }
     }
 }
