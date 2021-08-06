@@ -1,3 +1,7 @@
+class Snake{
+    
+}
+
 const expect = require('chai').expect;
 
 describe('World', function() {
