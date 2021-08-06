@@ -36,4 +36,11 @@ describe('Snake', function() {
         snake.update();
         expect(snake.getHeadPosition()).to.deep.equal(new Position(0,1));
     })
+
+    it('can move twice in direction', function() {
+        snake.setDirection(directionNorth);
+        snake.update();
+        snake.update();
+        expect(snake.getHeadPosition()).to.deep.equal(new Position(0,2));
+    })
 });
