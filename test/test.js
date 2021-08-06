@@ -9,7 +9,7 @@ describe('Snake', function() {
     const defaultPosition = new Position(0,0);
     const directionNorth = 'north';
 
-    before(function() {
+    beforeEach(function() {
         snake = new Snake();
     });
 
