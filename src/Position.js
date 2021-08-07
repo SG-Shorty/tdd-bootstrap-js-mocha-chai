@@ -1,11 +1,15 @@
 class Position {
+    
     constructor(positionX, positionY) {
         this.positionX = positionX;
         this.positionY = positionY;
     }
 
-    add(position){
-        return new Position(this.positionX+position.positionX, this.positionY+position.positionY)
+    add(direction) {
+        if (direction != null) {
+            this.positionX += direction.position.positionX;
+            this.positionY += direction.position.positionY;
+        }
     }
 }
 
